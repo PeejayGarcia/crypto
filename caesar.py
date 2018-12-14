@@ -4,13 +4,18 @@
 # other than a single letter, like alphabet_position("grandpa22!")
 def alphabet_position(letter):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    letter_pos = ''
     low_letter = letter.lower()
-    letter_pos = ord(low_letter)
+    for char in low_letter:
+        if char == ' ':
+            encrypted = encrypted + ' '
+        else:
+            encrypted = alphabet.index(char)
     
-    return letter_pos
+    return encrypted
 
 def main():
-    print(alphabet_position('b'))
+    print(alphabet_position('Z'))
 
 
 if __name__ == "__main__":
