@@ -14,6 +14,9 @@ def alphabet_position(letter):
     
     return encrypted
 
+def rotate_character(char, rot):
+    
+
 def main():
     print(alphabet_position('Z'))
 
