@@ -3,3 +3,14 @@
 #happen if somebody tries to use your function with an input parameter that is something 
 # other than a single letter, like alphabet_position("grandpa22!")
 def alphabet_position(letter):
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    letter = letter.lower()
+    
+    return letter
+
+def main():
+    print(alphabet_position('aBa'))
+
+
+if __name__ == "__main__":
+    main()
