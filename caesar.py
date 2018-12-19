@@ -2,53 +2,39 @@
 #You can assume that your input will definitely be a letter. Don’t worry about what might 
 #happen if somebody tries to use your function with an input parameter that is something 
 # other than a single letter, like alphabet_position("grandpa22!")
-def rot13(mess):
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    encrypted = ''
-    for char in mess:
-        if char == ' ':
-            encrypted = encrypted + ' '
-        else:
-            rotated_index = alphabet.index(char) + 13
-            if rotated_index < 26:
-                encrypted = encrypted + alphabet[rotated_index]
-            else:
-                encrypted = encrypted + alphabet[rotated_index % 26]
-    return encrypted
-
-def main():
-    print(rot13('abcde'))
-    print(rot13('nopqr'))
-    print(rot13(rot13('since rot thirteen is symmetric you should see this message')))
-
-if __name__ == "__main__":
-    main()
+import string
     
 ####
+#      use alphabet_position maybe
+#      preserve case
 
-def rotate_character(char, rot):
-    alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    char = alphabet_position(char)
-    for letter in mess:
-        if char == ' ':
-            encrypted = encrypted + ' '
-        if rot != string.ascii_letters:
+def rotate_character(char, rot)
+    lower = string.ascii_lowercase
+    upper = string.ascii_uppercase
+    #char = alphabet_position
+
+    #while statement, isalpha
+    #if character is upper he did index =
+
+    while char.isalpha:
+#        char = alphabet_position(char)
+        if char.isupper == True:
             return char
-        else:
-            rotated_index = alphabet.index(char) + 13
-            if rotated_index < 26:
-                encrypted = encrypted + alphabet[rotated_index]
-            else:
-                encrypted = encrypted + alphabet[rotated_index % 26]
-    return encrypted
-    return char
+
+        if char.islower == True:
+            return char
+    
+    
+    
+
+    return rotated 
 
 
 ####
 
 def alphabet_position(letter):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    low_letter = letter.lower()
+    low_letter = letter.lower() 
     for char in low_letter:
         if char == ' ':
             letter_pos = letter_pos + ' '
@@ -58,6 +44,7 @@ def alphabet_position(letter):
     return letter_pos
 
 #def rotate_character(char, rot):
+
     
 
 def main():
