@@ -31,3 +31,14 @@ def rotate_character(char, rot):
             new_position = lower[position]
             return new_position  
     return char
+
+
+def encrypt(text, rot):
+    
+
+
+def main():
+
+          
+if __name__ == "__main__":
+          main()
