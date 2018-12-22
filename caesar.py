@@ -11,14 +11,18 @@ import string
 
 def alphabet_position(letter):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
-    low_letter = letter.lower() 
-    for char in low_letter:
-        if char == ' ':
+    while letter.isalpha():
+        if letter.isupper():
+            lower = letter.lower()
+            letter_pos = alphabet.index(lower)
+            return letter_pos
+        if letter == ' ':
             letter_pos = letter_pos + ' '
+            return letter_pos
         else:
-            letter_pos = alphabet.index(char)
-    
-    return letter_pos
+            letter_pos = alphabet.index(letter)
+            return letter_pos
+    return letter
 
 
 def rotate_character(char, rot):
@@ -33,18 +37,24 @@ def rotate_character(char, rot):
         else:
             position = ((lower.find(char)  + rot) % 26)
             new_position = lower[position]
-            return new_position
-    
+            return new_position  
     return char
 
 
 def encrypt(text, rot):
+    encrypted = ''
+    for char in text:
+        encrypted = encrypted + rotate_character(char, rot)
+    return encrypted
 
 
         
         
 def main():
-    print(rotate_character('A', 26))
+    text = input("Type a message:")
+    rot = int(input("Rotate by:"))
+    print(encrypt(text, rot))
+
           
 if __name__ == "__main__":
           main()
