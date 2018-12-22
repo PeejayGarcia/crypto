@@ -1,6 +1,5 @@
 import string
 
-
 def alphabet_position(letter):
     alphabet = 'abcdefghijklmnopqrstuvwxyz'
     while letter.isalpha():
@@ -15,7 +14,6 @@ def alphabet_position(letter):
             letter_pos = alphabet.index(letter)
             return letter_pos
     return letter
-
 
 def rotate_character(char, rot):
     lower = string.ascii_lowercase
