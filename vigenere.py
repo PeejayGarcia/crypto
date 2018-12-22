@@ -33,8 +33,8 @@ def rotate_character(char, rot):
     return char
 
 
-def encrypt(text, rot):
-    
+def encrypt(text, key):
+
 
 
 def main():
